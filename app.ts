@@ -14,7 +14,7 @@ import SettingsDialog from './src/components/settings/index';
 import { bash, forMonitors } from 'src/lib/utils';
 import options from 'src/options';
 import OSD from 'src/components/osd/index';
-import { App } from 'astal/gtk4';
+import { App } from 'astal/gtk3';
 import { execAsync } from 'astal';
 import { hyprlandService } from 'src/lib/constants/services';
 import { handleRealization } from 'src/components/menus/shared/dropdown/helpers';
