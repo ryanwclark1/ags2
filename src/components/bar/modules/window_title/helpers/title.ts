@@ -28,6 +28,7 @@ export const getWindowMatch = (client: AstalHyprland.Client): Record<string, str
         ['spotify', '󰓇', 'Spotify'],
         ['ristretto', '󰋩', 'Ristretto'],
         ['obsidian', '󱓧', 'Obsidian'],
+        ['ghosty', '', 'Ghosty'],
 
         // Browsers
         ['google-chrome', '', 'Google Chrome'],
