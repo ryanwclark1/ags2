@@ -20,6 +20,7 @@ export const RevealerTransitionMap = {
 };
 
 export const dropdownMenuList = [
+    // 'aimenu',
     'dashboardmenu',
     'audiomenu',
     'mediamenu',

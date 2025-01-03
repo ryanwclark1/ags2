@@ -16,6 +16,74 @@ export const CustomModuleSettings = (): JSX.Element => {
                 <Header title="General" />
                 <Option opt={options.bar.customModules.scrollSpeed} title="Scrolling Speed" type="number" />
 
+                {/* AI Section */}
+                <Header title="AI Chat" />
+                <Option opt={options.bar.customModules.ai.icon} title="AI Icon" type="string" />
+                <Option opt={options.bar.customModules.ai.label} title="Show Label" type="boolean" />
+                <Option
+                    opt={options.bar.customModules.ai.maxHistory}
+                    title="Max History"
+                    type="number"
+                    min={10}
+                    max={100}
+                    increment={5}
+                    subtitle="Maximum number of messages to keep in history"
+                />
+                <Option
+                    opt={options.bar.customModules.ai.autoScroll}
+                    title="Auto Scroll"
+                    type="boolean"
+                    subtitle="Automatically scroll to new messages"
+                />
+
+                {/* OpenAI Config */}
+                <Option
+                    opt={options.bar.customModules.ai.openai.apiKey}
+                    title="OpenAI API Key"
+                    type="string"
+                    subtitle="Your OpenAI API key for GPT access"
+                />
+                <Option
+                    opt={options.bar.customModules.ai.openai.model}
+                    title="OpenAI Model"
+                    type="enum"
+                    enums={['gpt-3.5-turbo', 'gpt-4']}
+                />
+
+                {/* Gemini Config */}
+                <Option
+                    opt={options.bar.customModules.ai.gemini.apiKey}
+                    title="Gemini API Key"
+                    type="string"
+                    subtitle="Your Google Gemini API key"
+                />
+                <Option
+                    opt={options.bar.customModules.ai.gemini.model}
+                    title="Gemini Model"
+                    type="string"
+                    subtitle="Default: gemini-pro"
+                />
+
+                {/* Ollama Config */}
+                <Option
+                    opt={options.bar.customModules.ai.ollama.endpoint}
+                    title="Ollama Endpoint"
+                    type="string"
+                    subtitle="Local Ollama endpoint (default: http://localhost:11434)"
+                />
+                <Option
+                    opt={options.bar.customModules.ai.ollama.model}
+                    title="Ollama Model"
+                    type="string"
+                    subtitle="Model name (e.g., llama2, mistral)"
+                />
+
+                <Option opt={options.bar.customModules.ai.leftClick} title="Left Click" type="string" />
+                <Option opt={options.bar.customModules.ai.rightClick} title="Right Click" type="string" />
+                <Option opt={options.bar.customModules.ai.middleClick} title="Middle Click" type="string" />
+                <Option opt={options.bar.customModules.ai.scrollUp} title="Scroll Up" type="string" />
+                <Option opt={options.bar.customModules.ai.scrollDown} title="Scroll Down" type="string" />
+
                 {/* RAM Section */}
                 <Header title="RAM" />
                 <Option opt={options.theme.bar.buttons.modules.ram.enableBorder} title="Button Border" type="boolean" />

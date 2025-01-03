@@ -14,6 +14,30 @@ export const CustomModuleTheme = (): JSX.Element => {
             vexpand={false}
         >
             <box vertical>
+                {/* AI Module Section */}
+                {/* <Header title="AI Chat" />
+                <Option opt={options.theme.bar.buttons.modules.ai.text} title="Text" type="color" />
+                <Option opt={options.theme.bar.buttons.modules.ai.icon} title="Icon" type="color" />
+                <Option opt={options.theme.bar.buttons.modules.ai.background} title="Label Background" type="color" />
+                <Option
+                    opt={options.theme.bar.buttons.modules.ai.icon_background}
+                    title="Icon Background"
+                    subtitle="Applies a background color to the icon section of the button.\nRequires 'split' button styling."
+                    type="color"
+                />
+                <Option opt={options.theme.bar.buttons.modules.ai.border} title="Border" type="color" /> */}
+
+                {/* AI Menu Colors */}
+                {/* <Header title="AI Chat Menu" />
+                <Option opt={options.menus.ai.message_user} title="User Message" type="color" />
+                <Option opt={options.menus.ai.message_assistant} title="Assistant Message" type="color" />
+                <Option opt={options.menus.ai.message_system} title="System Message" type="color" />
+                <Option opt={options.menus.ai.input_background} title="Input Background" type="color" />
+                <Option opt={options.menus.ai.input_text} title="Input Text" type="color" />
+                <Option opt={options.menus.ai.send_button} title="Send Button" type="color" />
+                <Option opt={options.menus.ai.send_button_hover} title="Send Button Hover" type="color" />
+                <Option opt={options.menus.ai.provider_label} title="Provider Label" type="color" /> */}
+
                 {/* RAM Module Section */}
                 <Header title="RAM" />
                 <Option opt={options.theme.bar.buttons.modules.ram.text} title="Text" type="color" />

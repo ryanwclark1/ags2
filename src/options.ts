@@ -408,6 +408,15 @@ const options = mkOptions(CONFIG, {
                         icon_background: opt(colors.base2),
                         spacing: opt('0.45em'),
                     },
+                    // ai: {
+                    //     enableBorder: opt(false),
+                    //     border: opt(colors.lavender),
+                    //     background: opt(colors.base2),
+                    //     text: opt(colors.lavender),
+                    //     icon: opt(colors.lavender),
+                    //     icon_background: opt(colors.base2),
+                    //     spacing: opt('0.45em'),
+                    // },
                 },
             },
             menus: {
@@ -891,6 +900,12 @@ const options = mkOptions(CONFIG, {
                             radius: opt('0.2em'),
                         },
                     },
+                    // ai: {
+                    //     scaling: opt(100),
+                    //     radius: opt('0.3em'),
+                    //     background: opt(colors.crust),
+                    //     text: opt(tertiary_colors.lavender),
+                    // },
                 },
             },
         },
@@ -1139,6 +1154,29 @@ const options = mkOptions(CONFIG, {
                 scrollUp: opt(''),
                 scrollDown: opt(''),
             },
+            ai: {
+                icon: opt('󰭹'),
+                label: opt(true),
+                maxHistory: opt(50),
+                autoScroll: opt(true),
+                leftClick: opt('menu:ai'),
+                rightClick: opt('ai:cycle-provider'),
+                middleClick: opt('ai:clear'),
+                scrollUp: opt('ai:previous'),
+                scrollDown: opt('ai:next'),
+                openai: {
+                    apiKey: opt(''),
+                    model: opt('gpt-3.5-turbo'),
+                },
+                gemini: {
+                    apiKey: opt(''),
+                    model: opt('gemini-pro'),
+                },
+                ollama: {
+                    endpoint: opt('http://localhost:11434'),
+                    model: opt('llama2'),
+                },
+            },
             power: {
                 icon: opt(''),
                 showLabel: opt(true),
@@ -1305,6 +1343,43 @@ const options = mkOptions(CONFIG, {
                 key: opt<string>(''),
             },
         },
+        ai: {
+            enabled: opt(true),
+        },
+        // ai: {
+        //     scaling: opt(100),
+        //     background: {
+        //         color: opt(colors.crust),
+        //     },
+        //     card: {
+        //         color: opt(colors.base),
+        //     },
+        //     border: {
+        //         color: opt(colors.surface0),
+        //     },
+        //     label: {
+        //         color: opt(colors.lavender),
+        //     },
+        //     hover: opt(colors.surface1),
+        //     icon: opt(colors.lavender),
+        //     clear: opt(colors.red),
+        //     text: opt(colors.text),
+        //     user_message: opt(colors.blue),
+        //     user_text: opt(colors.mantle),
+        //     assistant_message: opt(colors.surface0),
+        //     system_message: opt(colors.surface2),
+        //     system_text: opt(colors.overlay2),
+        //     input: {
+        //         background: opt(colors.surface0),
+        //         focus: opt(colors.surface1),
+        //         text: opt(colors.text),
+        //     },
+        //     send: {
+        //         background: opt(colors.lavender),
+        //         hover: opt(colors.mauve),
+        //         icon: opt(colors.mantle),
+        //     },
+        // },
     },
 
     scalingPriority: opt<ScalingPriority>('gdk'),
@@ -1334,6 +1409,21 @@ const options = mkOptions(CONFIG, {
     hyprpanel: {
         restartAgs: opt(true),
         restartCommand: opt('hyprpanel -q; hyprpanel'),
+    },
+
+    ai: {
+        openai: {
+            apiKey: opt(''),
+            model: opt('gpt-3.5-turbo'),
+        },
+        gemini: {
+            apiKey: opt(''),
+            model: opt('gemini-pro'),
+        },
+        ollama: {
+            endpoint: opt('http://localhost:11434'),
+            model: opt('llama2'),
+        },
     },
 
     dummy: opt(true),

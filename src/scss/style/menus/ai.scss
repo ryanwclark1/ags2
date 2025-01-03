@@ -1,0 +1,81 @@
+.ai-menu-content * {
+  font-size: $font-size * $bar-menus-menu-ai-scaling * 0.01;
+}
+
+.ai-content-container {
+  margin-top: 0em;
+  min-width: 30em;
+  min-height: 6em;
+  background: if($bar-menus-monochrome, $bar-menus-background, $bar-menus-menu-ai-background-color);
+  border: $bar-menus-border-size solid if($bar-menus-monochrome, $bar-menus-border-color, $bar-menus-menu-ai-border-color);
+  border-radius: $bar-menus-border-radius;
+  margin-left: 0.5em;
+  opacity: $bar-menus-opacity * 0.01;
+}
+
+.ai-menu-item-container {
+  border-radius: $bar-menus-card_radius;
+  margin-bottom: 1.35em;
+  background: if($bar-menus-monochrome, $bar-menus-cards, $bar-menus-menu-ai-card-color);
+}
+
+.ai-content-items {
+  margin: 1.35;
+}
+
+.ai-container-box {
+  margin: 0.75em;
+  padding: 0.5em;
+}
+
+.ai-menu-widget {
+  border-radius: 0.4em;
+  color: if($bar-menus-monochrome, $bar-menus-text, $bar-menus-menu-ai-calendar-days);
+
+  &:selected {
+    box-shadow:
+      inset 0 -0.5em 0 0 if($bar-menus-monochrome, $bar-menus-label, $bar-menus-menu-ai-calendar-currentday),
+      inset -0.4em -0.3em 0 0 if($bar-menus-monochrome, $bar-menus-cards, $bar-menus-menu-ai-card-color),
+      inset 0.4em 0 0 0.01em if($bar-menus-monochrome, $bar-menus-cards, $bar-menus-menu-ai-card-color);
+    color: if($bar-menus-monochrome, $bar-menus-label, $bar-menus-menu-ai-calendar-currentday);
+    border-radius: 0em;
+  }
+
+  &.header {
+    background-color: transparent;
+    color: if($bar-menus-monochrome, $bar-menus-label, $bar-menus-menu-ai-calendar-yearmonth);
+  }
+
+  &.button {
+    color: $text;
+    font-weight: 900;
+    font-size: 900em;
+  }
+
+  &:hover {
+    color: if($bar-menus-monochrome, $bar-menus-icons-active, $bar-menus-menu-ai-calendar-paginator);
+  }
+
+  &.highlight {
+    color: if($bar-menus-monochrome, $bar-menus-icons-active, $bar-menus-menu-ai-calendar-weekdays);
+  }
+
+  &:indeterminate {
+    color: transparentize(if($bar-menus-monochrome, $bar-menus-text, $bar-menus-menu-ai-calendar-days), 0.65);
+  }
+
+  font-size: 1.1em;
+  padding: 0.35em;
+}
+
+.ai-menu-item-container {
+  margin-bottom: 0.65em;
+
+  &:last-child {
+    margin-bottom: 0em;
+  }
+}
+
+.menu-separator.ai {
+  margin: 1.5em 0em;
+}

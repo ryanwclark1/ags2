@@ -1,0 +1,31 @@
+.ai-custom {
+  font-size: $font-size;
+  color: if($bar-buttons-monochrome, $bar-buttons-text, $bar-buttons-ai-text);
+  background: if($bar-buttons-monochrome, $bar-buttons-background, $bar-buttons-ai-background);
+
+  padding: $bar-buttons-padding-y $bar-buttons-padding-x;
+  margin: $bar-buttons-y-margins 0;
+  border-radius: $bar-buttons-radius;
+
+  &:hover {
+    background: if($bar-buttons-monochrome, $bar-buttons-hover, $bar-buttons-ai-hover);
+  }
+
+  .icon {
+    color: if($bar-buttons-monochrome, $bar-buttons-text, $bar-buttons-ai-icon);
+    background: if($bar-buttons-monochrome,
+        $bar-buttons-background,
+        $bar-buttons-ai-icon_background );
+    min-width: 1.2em;
+    margin-right: if($bar-buttons-style =="split", 0em, $bar-buttons-ai-spacing);
+  }
+
+  .label {
+    color: if($bar-buttons-monochrome, $bar-buttons-text, $bar-buttons-ai-text);
+    margin-left: if($bar-buttons-style =="split", $bar-buttons-ai-spacing, 0em);
+  }
+
+  @if $bar-buttons-enableBorders or $bar-buttons-ai-enableBorder {
+    border: $bar-buttons-borderSize solid if($bar-buttons-monochrome, $bar-buttons-borderColor, $bar-buttons-ai-border);
+  }
+}
