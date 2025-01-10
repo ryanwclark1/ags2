@@ -24,12 +24,13 @@ import {
     Power,
     Hyprsunset,
     Hypridle,
+    Cava,
     Ai,
 } from './exports';
 
 import { WidgetContainer } from './shared/WidgetContainer';
 import options from 'src/options';
-import { App, Gtk } from 'astal/gtk3/index';
+import { App, Gtk } from 'astal/gtk3';
 
 import Astal from 'gi://Astal?version=3.0';
 import { bind, Variable } from 'astal';
@@ -63,6 +64,7 @@ const widget = {
     power: (): JSX.Element => WidgetContainer(Power()),
     hyprsunset: (): JSX.Element => WidgetContainer(Hyprsunset()),
     hypridle: (): JSX.Element => WidgetContainer(Hypridle()),
+    cava: (): JSX.Element => WidgetContainer(Cava()),
     ai: (): JSX.Element => WidgetContainer(Ai()),
 };
 
