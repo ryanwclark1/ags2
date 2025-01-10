@@ -1,6 +1,4 @@
 {
-  description = "My Awesome Desktop Shell";
-
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
 
@@ -27,14 +25,15 @@
         name = "my-shell";
         entry = "app.ts";
 
-        # additional libraries and executables to add to gjs' runtime
-        extraPackages = (with ags.packages.${system}; [
+        extraPackages =
+          (with ags.packages.${system}; [
             tray
             hyprland
             apps
             battery
             bluetooth
             mpris
+            cava
             network
             notifd
             powerprofiles
@@ -88,18 +87,5 @@
     };
 
     homeManagerModules.my-shell = import ./nix/module.nix self;
-  };
-
-  devShells.${system} = {
-    default = pkgs.mkShell {
-      buildInputs = [
-        # includes astal3 astal4 astal-io by default
-        (ags.packages.${system}.default.override {
-          extraPackages = [
-            # cherry pick packages
-          ];
-        })
-      ];
-    };
   };
 }
