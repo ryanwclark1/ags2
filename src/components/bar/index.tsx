@@ -25,7 +25,7 @@ import {
     Hyprsunset,
     Hypridle,
     Cava,
-    // Ai,
+    Ai,
 } from './exports';
 
 import { WidgetContainer } from './shared/WidgetContainer';
@@ -65,7 +65,7 @@ const widget = {
     hyprsunset: (): JSX.Element => WidgetContainer(Hyprsunset()),
     hypridle: (): JSX.Element => WidgetContainer(Hypridle()),
     cava: (): JSX.Element => WidgetContainer(Cava()),
-    // ai: (): JSX.Element => WidgetContainer(Ai()),
+    ai: (): JSX.Element => WidgetContainer(Ai()),
 };
 
 export const Bar = (() => {
