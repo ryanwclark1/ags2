@@ -24,7 +24,7 @@ import { Power } from '../../components/bar/modules/power/index';
 import { Hyprsunset } from '../../components/bar/modules/hyprsunset/index';
 import { Hypridle } from '../../components/bar/modules/hypridle/index';
 import { Cava } from '../../components/bar/modules/cava/index';
-import { Ai } from '../../components/bar/modules/ai/index';
+// import { Ai } from '../../components/bar/modules/ai/index';
 export {
     Menu,
     Workspaces,
@@ -52,5 +52,5 @@ export {
     Hyprsunset,
     Hypridle,
     Cava,
-    Ai,
+    // Ai,
 };

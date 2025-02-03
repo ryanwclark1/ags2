@@ -1163,29 +1163,29 @@ const options = mkOptions(CONFIG, {
                 scrollUp: opt(''),
                 scrollDown: opt(''),
             },
-            ai: {
-                icon: opt('󰭹'),
-                label: opt(true),
-                maxHistory: opt(50),
-                autoScroll: opt(true),
-                leftClick: opt('menu:ai'),
-                rightClick: opt('ai:cycle-provider'),
-                middleClick: opt('ai:clear'),
-                scrollUp: opt('ai:previous'),
-                scrollDown: opt('ai:next'),
-                openai: {
-                    apiKey: opt(''),
-                    model: opt('gpt-3.5-turbo'),
-                },
-                gemini: {
-                    apiKey: opt(''),
-                    model: opt('gemini-pro'),
-                },
-                ollama: {
-                    endpoint: opt('http://localhost:11434'),
-                    model: opt('llama2'),
-                },
-            },
+            // ai: {
+            //     icon: opt('󰭹'),
+            //     label: opt(true),
+            //     maxHistory: opt(50),
+            //     autoScroll: opt(true),
+            //     leftClick: opt('menu:ai'),
+            //     rightClick: opt('ai:cycle-provider'),
+            //     middleClick: opt('ai:clear'),
+            //     scrollUp: opt('ai:previous'),
+            //     scrollDown: opt('ai:next'),
+            //     openai: {
+            //         apiKey: opt(''),
+            //         model: opt('gpt-3.5-turbo'),
+            //     },
+            //     gemini: {
+            //         apiKey: opt(''),
+            //         model: opt('gemini-pro'),
+            //     },
+            //     ollama: {
+            //         endpoint: opt('http://localhost:11434'),
+            //         model: opt('llama2'),
+            //     },
+            // },
             power: {
                 icon: opt(''),
                 showLabel: opt(true),
@@ -1373,9 +1373,9 @@ const options = mkOptions(CONFIG, {
                 key: opt<string>(''),
             },
         },
-        ai: {
-            enabled: opt(true),
-        },
+        // ai: {
+        //     enabled: opt(true),
+        // },
         // ai: {
         //     scaling: opt(100),
         //     background: {
@@ -1441,20 +1441,20 @@ const options = mkOptions(CONFIG, {
         restartCommand: opt('hyprpanel -q; hyprpanel'),
     },
 
-    ai: {
-        openai: {
-            apiKey: opt(''),
-            model: opt('gpt-3.5-turbo'),
-        },
-        gemini: {
-            apiKey: opt(''),
-            model: opt('gemini-pro'),
-        },
-        ollama: {
-            endpoint: opt('http://localhost:11434'),
-            model: opt('llama2'),
-        },
-    },
+    // ai: {
+    //     openai: {
+    //         apiKey: opt(''),
+    //         model: opt('gpt-3.5-turbo'),
+    //     },
+    //     gemini: {
+    //         apiKey: opt(''),
+    //         model: opt('gemini-pro'),
+    //     },
+    //     ollama: {
+    //         endpoint: opt('http://localhost:11434'),
+    //         model: opt('llama2'),
+    //     },
+    // },
 
     dummy: opt(true),
 });
